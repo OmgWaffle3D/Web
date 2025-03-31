@@ -5,11 +5,19 @@
   "type": "module",
   "author": "",
   "license": "ISC",
-  "description": "",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.21.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmgWaffle3D/Web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OmgWaffle3D/Web/issues"
+  },
+  "homepage": "https://github.com/OmgWaffle3D/Web#readme",
+  "description": ""
 }
