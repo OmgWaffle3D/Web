@@ -3,17 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
     <title>Profile</title>
 </head>
 <body>
-    <h1>Profile</h1>
-    <h2>AuraLeveling</h2>
-    <img src="/images/AuraLeveling.jpg" alt="" width="100" height="100">\
-    <nav>
+    <nav class="main-nav">
         <ul>
-            <li><a href="../">Login</a></li>
             <li><a href="./home.html">Home</a></li>
-            <li><a href="./tags.html">Tags</a></li>
+            <li><a href="./profile.html">Profile</a></li>
+            <li><a href="./account.html">Account</a></li>
+            <li><a href="./search.html">Search</a></li>
         </ul>
+        <form class="search-bar" action="./search.html" method="GET">
+            <input type="text" name="query" placeholder="Search..." required>
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+    <header class="profile-header">
+        <h1 class="profile-title">Profile</h1>
+        <h2 class="profile-subtitle">AuraLeveling</h2>
+        <img class="profile-image" src="/images/AuraLeveling.jpg" alt="AuraLeveling">
+    </header>
+    <main class="profile-main">
+        <section class="profile-grid">
+            <div class="profile-card">
+                <h3 class="profile-section-title">X (formerly Twitter)</h3>
+                <p class="profile-description">Follow AuraLeveling on X for updates and news.</p>
+                <a href="https://x.com/AuraLeveling" target="_blank" class="profile-link">Visit X Profile</a>
+            </div>
+            <div class="profile-card">
+                <h3 class="profile-section-title">Instagram</h3>
+                <p class="profile-description">Check out AuraLeveling's Instagram for photos and stories.</p>
+                <a href="https://instagram.com/AuraLeveling" target="_blank" class="profile-link">Visit Instagram Profile</a>
+            </div>
+            <div class="profile-card">
+                <h3 class="profile-section-title">Institutional Profile</h3>
+                <p class="profile-description">Learn more about AuraLeveling's institutional presence.</p>
+                <a href="https://institutionalwebsite.com/AuraLeveling" target="_blank" class="profile-link">Visit Institutional Profile</a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

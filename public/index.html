@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <title>My first html website</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to my first HTML website!</h1>
-    </header>
-    <nav>
+    <nav class="main-nav">
         <ul>
-            <li>login </li>
             <li><a href="./pages/home.html">Home</a></li>
             <li><a href="./pages/profile.html">Profile</a></li>
+            <li><a href="./pages/account.html">Account</a></li>
+            <li><a href="./pages/search.html">Search</a></li>
         </ul>
+        <form class="search-bar" action="./pages/search.html" method="GET">
+            <input type="text" name="query" placeholder="Search..." required>
+            <button type="submit">Search</button>
+        </form>
     </nav>
-    <header>
-        <!--Login Info-->
-        <h1>Web Page</h1></header>
-        <form action="/pages/home.html" method="GET">
+    <div class="login-container">
+        <h2>Login Info</h2>
+        <br>
+        <p>Enter your login information below:</p>
+        <br>
+        <form action="./pages/home.html" method="GET" class="login-form">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br><br>
             <label for="password">Password:</label>
@@ -27,6 +33,6 @@
             <input type="submit" value="Submit">
             <a href="./pages/home.html">Home</a>
         </form>
-
+    </div> 
 </body>
 </html>
