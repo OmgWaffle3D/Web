@@ -321,6 +321,7 @@ ul li a:hover {
 
 .main-nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 .main-nav ul li a {
@@ -357,12 +358,43 @@ ul li a:hover {
     margin-bottom: 15px;
 }
 
+.profile-hover-container {
+    position: relative;
+    display: inline-block;
+}
+
 .profile-image {
     margin: 20px auto;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 150px;
     height: 150px;
+}
+
+.logout-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.profile-hover-container:hover .logout-button {
+    display: block;
+    opacity: 1;
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
 }
 
 .profile-nav {
@@ -471,4 +503,43 @@ profile-nav-list {
 .card-text {
     font-size: 1em;
     color: #666;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.profile-dropdown .dropdown-menu li {
+    padding: 5px 20px;
+}
+
+.profile-dropdown .dropdown-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.profile-dropdown .dropdown-menu li a:hover {
+    background-color: #444;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
 }

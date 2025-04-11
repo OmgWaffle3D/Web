@@ -10,7 +10,14 @@
     <nav class="main-nav">
         <ul>
             <li><a href="./home.html">Home</a></li>
-            <li><a href="./profile.html">Profile</a></li>
+            <li class="profile-dropdown" id="profile-dropdown">
+                <a href="./profile.html" id="profile-link">Profile</a>
+                <ul class="dropdown-menu" id="profile-dropdown-menu">
+                    <li id="view-profile-item"><a href="./profile.html">View Profile</a></li>
+                    <li id="settings-item"><a href="./settings.html">Settings</a></li>
+                    <li id="logout"><a href="../index.html">Logout</a></li>
+                </ul>
+            </li>
             <li><a href="./account.html">Account</a></li>
             <li><a href="./search.html">Search</a></li>
         </ul>
@@ -22,7 +29,10 @@
     <header class="profile-header">
         <h1 class="profile-title">Profile</h1>
         <h2 class="profile-subtitle">AuraLeveling</h2>
-        <img class="profile-image" src="/images/AuraLeveling.jpg" alt="AuraLeveling">
+        <div class="profile-hover-container">
+            <img class="profile-image" src="/images/AuraLeveling.jpg" alt="AuraLeveling">
+            <button class="logout-button">Logout</button>
+        </div>
     </header>
     <main class="profile-main">
         <section class="profile-grid">
@@ -43,5 +53,8 @@
             </div>
         </section>
     </main>
+    <section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </section>
 </body>
 </html>
