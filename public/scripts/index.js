@@ -1,30 +1,29 @@
 // console.log("Hello, world!");
 // alert("Cookies?");
-
-const login = () => {    
-    console.log(usernameInput.value + " " + passwordInput.value);
-    if((usernameInput.value === correctUser) && (passwordInput.value === correctPass)){
-
-        sessionStorage.name = "Eduardo Vega";
-
-        window.location = "./pages/profile.html";
-
-    }else{
-        alert("Incorrect username or password");
-        console.log("Incorrect username or password");
-    }   
-};
-
-const button = document.getElementById("submit-button");
+const boton = document.getElementById("btn-login");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 
+const  login =  async () => {
+    // validar credenciales
+    const credentials = {username:username.value, password: password.value}
+    const data = await fetch("http://localhost:4000/login", {
+        method:"POST",
+        headers:{"content-type":"application/json"}, 
+        body: JSON.stringify(credentials)});
 
-const loging = () => {
-    console.log(username.value + " " + password.value);
-    window.location.href = "/home";
-    
+    const res = await data.json();
+    //console.log(username.value + " " + password.value);
+    // Si el login es correcto
+    if (res.isLogin) {
+        sessionStorage.setItem("name", res.user.name);
+        sessionStorage.setItem("id", res.user.id);
+        window.location = "./pages/profile.html";
+    }else {
+        // Si el login es incorrecto
+    alert("Credenciales incorrectas");
+
+    }
 };
-
 
 button.addEventListener("click",login);
